@@ -7,7 +7,7 @@ let's define a class for the simple linear regression model
 '''
 
 class SimpleLinearRegression:
-    def __init__(self, x,y, slope, intercept):
+    def __init__(self, x,y, slope=0, intercept=0):
         self.x = x
         self.y = y
         self.slope = slope
@@ -21,8 +21,8 @@ class SimpleLinearRegression:
         denominator = np.sum((self.x - x_mean) ** 2)
         self.slope = numerator / denominator
         self.intercept = y_mean - self.slope * x_mean
-        predictions = self.slope * self.x + self.intercept
-        mse = np.mean((self.y - predictions) ** 2)
+        self.predictions = self.slope * self.x + self.intercept
+        mse = np.mean((self.y - self.predictions) ** 2)
         return self.slope, self.intercept, mse, self.predictions
     
     def predict(self, x):
@@ -37,6 +37,6 @@ class SimpleLinearRegression:
 #initialize the class
 x = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 y = np.array([300, 350, 500, 700, 800, 850, 900, 900, 1000, 1200])
-model = SimpleLinearRegression(x, y, 0, 0)
+model = SimpleLinearRegression(x, y)
 model.linearReg()
 model.visualize()
