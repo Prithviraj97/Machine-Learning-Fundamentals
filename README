@@ -1,1 +1,8 @@
 🙂 This repo will contain pure mathematical implementation of common ML algorithms like Linear Regression (all types), PCA and SVM.
+
+Some algorithms implemented here:
+  - Simple Linear Regression
+  - Multiple Linear Regression
+  - Support Vector Machine
+  - Principle Component Analysis
+  - K-Nearest Neighbors
