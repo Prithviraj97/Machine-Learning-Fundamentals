@@ -55,3 +55,5 @@ def linear_regression(x, y):
 
 slope, intercept, mse, predictions = linear_regression(x, y)
 print(slope, intercept, mse, predictions)
+
+#calculate the means withour using numpy
