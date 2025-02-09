@@ -11,26 +11,47 @@ Goal - implement the Linear Regression Algorithm.
 x = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 y = np.array([300, 350, 500, 700, 800, 850, 900, 900, 1000, 1200])
 
-#calculate the mean of x and y
-x_mean = np.mean(x)
-y_mean = np.mean(y)
+# #calculate the mean of x and y
+# x_mean = np.mean(x)
+# y_mean = np.mean(y)
 
-#calculate the slope and the intercept
-numerator = np.sum((x - x_mean) * (y - y_mean))
-denominator = np.sum((x - x_mean) ** 2)
-slope = numerator / denominator
-intercept = y_mean - slope * x_mean
+# #calculate the slope and the intercept
+# numerator = np.sum((x - x_mean) * (y - y_mean))
+# denominator = np.sum((x - x_mean) ** 2)
+# slope = numerator / denominator
+# intercept = y_mean - slope * x_mean
 
-#make predictions
-predictions = slope * x + intercept
+# #make predictions
+# predictions = slope * x + intercept
 
-#calculate the error
-mse = np.mean((y - predictions) ** 2)
+# #calculate the error
+# mse = np.mean((y - predictions) ** 2)
 
-#output the results
-print(slope, intercept, mse, predictions)
+# #output the results
+# print(slope, intercept, mse, predictions)
 
 # #visualize the data and the model
 # plt.scatter(x, y, color='red')
 # plt.plot(x, predictions, color='blue')
 # plt.show()
+
+
+# #lets predict the price of a house with an area of 1000
+# area = 1000
+# price = slope * area + intercept
+# print(price)
+
+#put all things in a function for reusability
+def linear_regression(x, y):
+    x_mean = np.mean(x)
+    y_mean = np.mean(y)
+    numerator = np.sum((x - x_mean) * (y - y_mean))
+    denominator = np.sum((x - x_mean) ** 2)
+    slope = numerator / denominator
+    intercept = y_mean - slope * x_mean
+    predictions = slope * x + intercept
+    mse = np.mean((y - predictions) ** 2)
+    return slope, intercept, mse, predictions
+
+slope, intercept, mse, predictions = linear_regression(x, y)
+print(slope, intercept, mse, predictions)
