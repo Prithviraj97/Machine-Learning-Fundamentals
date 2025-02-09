@@ -1,12 +1,28 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import math
-
-'''
-let's define a class for the simple linear regression model
-'''
 
 class SimpleLinearRegression:
+    """
+    A simple linear regression model.
+    Attributes:
+        x (array-like): The input feature data.
+        y (array-like): The target data.
+        slope (float): The slope of the regression line. Default is 0.
+        intercept (float): The intercept of the regression line. Default is 0.
+        predictions (array-like): The predicted values after fitting the model.
+    Methods:
+        linearReg():
+            Fits the linear regression model to the data.
+            Returns the slope, intercept, mean squared error, and predictions.
+        predict(x):
+            Predicts the target value for a given input feature value.
+            Args:
+                x (float): The input feature value.
+            Returns:
+                float: The predicted target value.
+        visualize():
+            Visualizes the data points and the fitted regression line.
+    """
     def __init__(self, x,y, slope=0, intercept=0):
         self.x = x
         self.y = y
