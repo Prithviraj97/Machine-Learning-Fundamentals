@@ -1,3 +1,4 @@
+package src;
 public class linearReg{
     public static void main(String[] args){
         double[] x = {1,2,3,4,5};
