@@ -1,4 +1,4 @@
-🙂 This repo will contain pure mathematical implementation of common ML algorithms like Linear Regression (all types), PCA and SVM.
+🙂 This repo contains pure mathematical implementation of common ML algorithms like Linear Regression (all types), PCA and SVM.
 
 Some algorithms implemented here:
   - Simple Linear Regression
@@ -6,3 +6,5 @@ Some algorithms implemented here:
   - Support Vector Machine
   - Principle Component Analysis
   - K-Nearest Neighbors
+
+This repo also has experimentation and ML analysis. We run experiment to predict the concentration of Dopamine in the presence of Ascorbic Acid in variable range. Refere to file inside the folder titled 'MLAlgorithms'.
