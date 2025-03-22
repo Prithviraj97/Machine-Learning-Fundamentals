@@ -6,7 +6,7 @@ import seaborn as sns
 # Sample data structure (you'll replace with your actual measurements)
 metrics = {
     'Platform': ['GPU', 'Arduino Nano BLE 33'],
-    'Inference Time (ms)': [15, 250],  # Example values
+    'Avg Inference Time (ms)': [15, 250],  # Example values
     'Memory Usage (MB)': [120, 0.136],  # Example values
     'Power Consumption (W)': [150, 0.015],  # Example values
     'Accuracy (%)': [92, 85]  # Example values
